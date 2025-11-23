@@ -1,4 +1,7 @@
+TotalGeneral = 0
+
 def menuplatillos():
+    global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
        
@@ -15,12 +18,16 @@ def menuplatillos():
             break
         elif opcion == 1:
             TotalGeneral += 18000
+            print(f"valor actual: {TotalGeneral}")
         elif opcion == 2:
             TotalGeneral += 12000
+            print(f"valor actual: {TotalGeneral}")
         elif opcion == 3:
-            TotalGeneral += 18000    
+            TotalGeneral += 18000 
+            print(f"valor actual: {TotalGeneral}")   
     
 def menuprincipal():
+    global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
         print("==============")
@@ -32,6 +39,8 @@ def menuprincipal():
         opcion = int(input("Que desea ordenar?"))
     
         if opcion == 0:
+            print("Gracias por su compra")
+            print(f"Total final: {TotalGeneral}")
             print("Saliendo...")
             break
         elif opcion == 1:
@@ -42,6 +51,7 @@ def menuprincipal():
             menuadicionales()
     
 def menubebidas():
+    global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
        
@@ -58,13 +68,17 @@ def menubebidas():
             break
         elif opcion == 1:
             TotalGeneral += 2000
+            print(f"valor actual: {TotalGeneral}")
         elif opcion == 2:
             TotalGeneral += 2500
+            print(f"valor actual: {TotalGeneral}")
         elif opcion == 3:
-            TotalGeneral += 1500   
+            TotalGeneral += 1500  
+            print(f"valor actual: {TotalGeneral}") 
             
             
 def menuadicionales():
+    global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
        
@@ -81,9 +95,12 @@ def menuadicionales():
             break
         elif opcion == 1:
             TotalGeneral += 5000
+            print(f"valor actual: {TotalGeneral}")
         elif opcion == 2:
             TotalGeneral += 7000
+            print(f"valor actual: {TotalGeneral}")
         elif opcion == 3:
             TotalGeneral += 8000
+            print(f"valor actual: {TotalGeneral}")
             
 menuprincipal()

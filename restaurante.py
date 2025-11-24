@@ -1,10 +1,17 @@
+import os
+def limpieza():
+    input("Presione cualquier tecla para continuar...")
+    os.system("clear")
+    os.system("cls" if os.name == "nt" else "clear")
+    os.system("cls" if os.name == "nt" else "clear")
+
 TotalGeneral = 0
 
 def menuplatillos():
     global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
-       
+        limpieza()
         print("=============================")
         print("======MENU DE PLATILLOS======")
         print("1.  Carne Asada  18000")
@@ -30,6 +37,7 @@ def menuprincipal():
     global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
+        limpieza()
         print("==============")
         print("OPCIONES")
         print("1.   platillos")
@@ -54,7 +62,7 @@ def menubebidas():
     global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
-       
+        limpieza()
         print("=============================")
         print("======MENU DE BEBIDAS======")
         print("1.  Pepsi           2000")
@@ -75,13 +83,12 @@ def menubebidas():
         elif opcion == 3:
             TotalGeneral += 1500  
             print(f"valor actual: {TotalGeneral}") 
-            
-            
+              
 def menuadicionales():
     global TotalGeneral
     TerminarPrograma = False
     while not TerminarPrograma:
-       
+        limpieza()
         print("=============================")
         print("=====MENU DE ADICIONALES=====")
         print("1.  Papas Fritas   5000")

@@ -7,6 +7,11 @@ def limpieza():
 TotalGeneral = 0
 pedido = []
 
+Tupla = ('Carne Asada - 18000', 'Higado - 12000', 'Pastas - 18000'),
+('Pepsi - 2000', 'Coca Cola - 2500', 'Colombiana - 1500'),
+('Papas Fritas - 5000', 'Ensalada - 7000', 'Yuca Frita - 8000')
+
+
 def menuplatillos():
     global TotalGeneral
     TerminarPrograma = False
@@ -25,15 +30,15 @@ def menuplatillos():
             break
         elif opcion == 1:
             TotalGeneral += 18000
-            pedido.append ("Carne Asada - 18000")
+            pedido.append (Tupla[0][0])
             print(f"valor actual: {TotalGeneral}")
         elif opcion == 2:
             TotalGeneral += 12000
-            pedido.append ("Higado - 12000")
+            pedido.append (Tupla[0][1])
             print(f"valor actual: {TotalGeneral}")
         elif opcion == 3:
             TotalGeneral += 18000 
-            pedido.append ("Pastas - 18000")
+            pedido.append (Tupla[0][2])
             print(f"valor actual: {TotalGeneral}")   
     
 def menuprincipal():
@@ -83,15 +88,15 @@ def menubebidas():
             break
         elif opcion == 1:
             TotalGeneral += 2000
-            pedido.append ("Pepsi - 2000")
+            pedido.append (Tupla[1][0])
             print(f"valor actual: {TotalGeneral}")
         elif opcion == 2:
             TotalGeneral += 2500
-            pedido.append ("Coca Cola - 2500")
+            pedido.append (Tupla[1][1])
             print(f"valor actual: {TotalGeneral}")
         elif opcion == 3:
             TotalGeneral += 1500  
-            pedido.append ("Colombiana - 1500")
+            pedido.append (Tupla[1][2])
             print(f"valor actual: {TotalGeneral}") 
             
             
@@ -113,15 +118,15 @@ def menuadicionales():
             break
         elif opcion == 1:
             TotalGeneral += 5000
-            pedido.append ("Papas Fritas - 5000")
+            pedido.append (Tupla[2][0])
             print(f"valor actual: {TotalGeneral}")
         elif opcion == 2:
             TotalGeneral += 7000
-            pedido.append ("Ensalada - 7000")
+            pedido.append (Tupla[2][1])
             print(f"valor actual: {TotalGeneral}")
         elif opcion == 3:
             TotalGeneral += 8000
-            pedido.append("Yuca Frita - 8000")
+            pedido.append (Tupla[2][2])
             print(f"valor actual: {TotalGeneral}")
             
 menuprincipal()

@@ -72,14 +72,36 @@
         #    print("lista vacia")
 
 
-diccionario2 = dict(
-        nombre = "jhon",
-        edad = 28,
-        esEstudiante = False
-)
+#diccionario2 = dict(
+#        nombre = "jhon",
+#        edad = 28,
+#        esEstudiante = False
+#)
 
-print(diccionario2)
+#print(diccionario2)
 
 
-print(diccionario2["nombre"])
-print(diccionario2.get("nombre"))
+#print(diccionario2["nombre"])
+#print(diccionario2.get("nombre"))
+
+producto = {
+    "code": "C002",
+    "name": "Elementos de limpieza",
+    "products": [
+          {
+            "code": "001",
+            "name": "Llantas",
+            "price": "150000"
+          }
+    ]
+}
+
+producto2 = {
+     "code": "C005",
+     "active": True
+}
+
+
+producto.update(producto2)
+print(producto)
+

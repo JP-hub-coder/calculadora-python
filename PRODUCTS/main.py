@@ -65,9 +65,9 @@ while True:
             else:
                 print(">> DATOS DEL PRODUCTO <<")
                 print(f"  CÓDIGO: {info['data']['code']}")
-                print(f"  CÓDIGO: {info['data']['name']}")
-                print(f"  CÓDIGO: {info['data']['price']}")
-                print(f"  CÓDIGO: {info['data']['provider']}")
+                print(f"  NOMBRE: {info['data']['name']}")
+                print(f"  PRECIO: {info['data']['price']}")
+                print(f"  PROVEEDOR: {info['data']['provider']}")
                 if   "active" == False:
                     print("  ESTADO: Inactivo")
                 else:

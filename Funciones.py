@@ -26,3 +26,9 @@ while(not TerminarPrograma):
         resultado= n1 / n2
     print(f"El resultado es: {str(resultado)}")
     input("\nPresione cualquier tecla para continuar...")
+
+
+
+
+
+SI

@@ -53,9 +53,25 @@ while True:
             productCode = input("Código del producto a eliminar: ")
             products = readFile(PRODUCT_FILE_PATH)
             info = findDictionary(products, "code", productCode)
-            print(f"desea borrar el producto {info['data']['code']} - {info['data']['name']} (S/N)?:")        
-        
-        
+            products.pop(info["data"]["index"])
+            saveFile(PRODUCT_FILE_PATH, dataProducts)
+            print(f"se ha elminado el producto {info['data']['code']} - {info['data']['name']}") 
+        case 5:
+            productCode = input("Código del producto a eliminar: ")
+            products = readFile(PRODUCT_FILE_PATH)
+            info = findDictionary(products, "code", productCode)
+            if len(info.keys()) == 0:
+                print("código no encontrado...")
+            else:
+                print(">> DATOS DEL PRODUCTO <<")
+                print(f"  CÓDIGO: {info['data']['code']}")
+                print(f"  CÓDIGO: {info['data']['name']}")
+                print(f"  CÓDIGO: {info['data']['price']}")
+                print(f"  CÓDIGO: {info['data']['provider']}")
+                if   "active" == False:
+                    print("  ESTADO: Inactivo")
+                else:
+                    print("  ESTADO:  Activo")    
         case 6:
             print("Bye!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             break

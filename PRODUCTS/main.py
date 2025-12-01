@@ -36,7 +36,7 @@ while True:
                 for product in products:
                     print(f"  {product['code']:<6} {product['name']:<22}  {product['provider']:<12} {product['price']:<12} {'Activo' if product['active'] else f'inactivo':<12}") 
         case 3:
-            productCode = input("Código del producto a eliminar: ")
+            productCode = input("Código del producto a editar: ")
             products = readFile(PRODUCT_FILE_PATH)
             info = findDictionary(products, "code", productCode)
             if len(info.keys()) == 0:
@@ -57,7 +57,7 @@ while True:
             saveFile(PRODUCT_FILE_PATH, dataProducts)
             print(f"se ha elminado el producto {info['data']['code']} - {info['data']['name']}") 
         case 5:
-            productCode = input("Código del producto a eliminar: ")
+            productCode = input("Código del producto a buscar: ")
             products = readFile(PRODUCT_FILE_PATH)
             info = findDictionary(products, "code", productCode)
             if len(info.keys()) == 0:
